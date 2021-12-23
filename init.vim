@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
+Plug 'xuhdev/vim-latex-live-preview'
 
 call plug#end()
 
@@ -65,3 +66,5 @@ set expandtab
 set autochdir
 set spell spelllang=en_us
 set cursorline
+
+autocmd BufWritePost *.tex silent! execute "!pdflatex % >/dev/null 2>&1" | redraw!
