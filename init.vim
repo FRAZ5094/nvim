@@ -8,8 +8,14 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim'
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -18,7 +24,8 @@ source $HOME/.config/nvim/plug-config/NERDTree.vim
 source $HOME/.config/nvim/plug-config/NERDCommenter.vim
 source $HOME/.config/nvim/plug-config/ctrlp.vim
 source $HOME/.config/nvim/plug-config/jedi.vim
-source $HOME/.config/nvim/plug-config/supertab.vim
+"source $HOME/.config/nvim/plug-config/supertab.vim
+source $HOME/.config/nvim/plug-config/coc.vim
 
 
 let g:lightline = {
@@ -68,3 +75,4 @@ set spell spelllang=en_us
 set cursorline
 
 autocmd BufWritePost *.tex silent! execute "!pdflatex % >/dev/null 2>&1" | redraw!
+
